@@ -5,20 +5,11 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+проблема в store src/store/index.ts
 
-### Compiles and minifies for production
-```
-npm run build
-```
+При вызове мутации из компонента  
+src/components/HelloWorld.vue
 
-### Lints and fixes files
-```
-npm run lint
-```
+store.commit("addParm2", { addParm: 3 });
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+компиляция проходит, warning нет, но тем не менее в runtime конечно выдает ошибку
